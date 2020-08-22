@@ -1,3 +1,4 @@
+[
 {"Id":12,"Name":"Balon Greyjoy","IsFemale":false,"Culture":"","Titles":["Iron King","King of the Isles and the North","King of Salt and Rock","Son of the Sea Wind","Lord Reaper of Pyke","The Greyjoy","Captain of the Great Kraken"],"Aliases":["Balon the Brave","Balon the Blessed","Balon the Twice Crowned","Balon the Widowmaker","The Kraken King"],"Born":"","Died":"299 AC, at Pyke","Father":836,"Mother":null,"Spouse":66,"Children":[913,718,150,1022],"Allegiances":[],"Books":[1,2,3,5,8],"PovBooks":[],"PlayedBy":["Patrick Malahide"],"TvSeries":["Season 2","Season 3", "Season 6"]},
 {"Id":13,"Name":"Chayle","IsFemale":false,"Culture":"","Titles":["Septon"],"Aliases":[],"Born":"","Died":"In 299 AC, at Winterfell","Father":null,"Mother":null,"Spouse":null,"Children":[],"Allegiances":[],"Books":[1,2,3],"PovBooks":[],"PlayedBy":[""],"TvSeries":[]},
 {"Id":14,"Name":"Gillam","IsFemale":false,"Culture":"","Titles":["Brother"],"Aliases":[],"Born":"","Died":"","Father":null,"Mother":null,"Spouse":null,"Children":[],"Allegiances":[],"Books":[5],"PovBooks":[],"PlayedBy":[""],"TvSeries":[]},
@@ -9,4 +10,5 @@
 {"Id":20,"Name":"Mordane","IsFemale":true,"Culture":"","Titles":["Septa"],"Aliases":[],"Born":"","Died":"In 298 AC, at King's Landing","Father":null,"Mother":null,"Spouse":null,"Children":[],"Allegiances":[362],"Books":[1,2,3],"PovBooks":[],"PlayedBy":["Susan Brown"],"TvSeries":["Season 1"]},
 {"Id":21,"Name":"Nysterica","IsFemale":true,"Culture":"","Titles":["Septa"],"Aliases":[],"Born":"","Died":"","Father":null,"Mother":null,"Spouse":null,"Children":[],"Allegiances":[],"Books":[3,5,8],"PovBooks":[],"PlayedBy":[""],"TvSeries":[]},
 {"Id":22,"Name":"Ollidor","IsFemale":false,"Culture":"","Titles":["Septon"],"Aliases":[],"Born":"","Died":"","Father":null,"Mother":null,"Spouse":null,"Children":[],"Allegiances":[],"Books":[5,8],"PovBooks":[],"PlayedBy":[""],"TvSeries":[]},
-{"Id":23,"Name":"Osmynd","IsFemale":false,"Culture":"","Titles":["Septon"],"Aliases":[],"Born":"","Died":"","Father":null,"Mother":null,"Spouse":null,"Children":[],"Allegiances":[],"Books":[2],"PovBooks":[],"PlayedBy":[""],"TvSeries":[]},
+{"Id":23,"Name":"Osmynd","IsFemale":false,"Culture":"","Titles":["Septon"],"Aliases":[],"Born":"","Died":"","Father":null,"Mother":null,"Spouse":null,"Children":[],"Allegiances":[],"Books":[2],"PovBooks":[],"PlayedBy":[""],"TvSeries":[]}
+]
