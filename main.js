@@ -1,13 +1,13 @@
-let container = document.getElementById('result');
+let container = document.getElementById('container');
 
-fetch("https://raw.githubusercontent.com/svennif/Semester-Project-2/master/data.json?token=AH6GSHWWYXU6M2NHHTUERCS7IEZQY")
+fetch("https://raw.githubusercontent.com/joakimskoog/AnApiOfIceAndFire/master/data/characters.json")
     .then(function (response) {
         return response.json();
     })
     .then(function (json) {
         showObject(json);
     })
-    .then(function (error) {
+    .catch(function (error) {
         console.log(error);
     });
 
@@ -15,5 +15,5 @@ fetch("https://raw.githubusercontent.com/svennif/Semester-Project-2/master/data.
 function showObject(characterObject) {
     character = characterObject;
 
-    console.log(character[0]);
+    console.log(character[999].Name);
 }
