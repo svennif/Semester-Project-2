@@ -1,6 +1,4 @@
-let container = document.getElementById('container');
-
-fetch("https://raw.githubusercontent.com/joakimskoog/AnApiOfIceAndFire/master/data/characters.json")
+fetch("https://raw.githubusercontent.com/svennif/Semester-Project-2/890bf9249347a2fe735ac98288ca527e89bcd901/data.json?token=AH6GSHVUM6KW6Z3OUSMMCSS7KEPMK")
     .then(function (response) {
         return response.json();
     })
@@ -13,7 +11,16 @@ fetch("https://raw.githubusercontent.com/joakimskoog/AnApiOfIceAndFire/master/da
 
 
 function showObject(characterObject) {
-    character = characterObject;
+    cardData = characterObject;
+    let card = document.querySelector(".card-container");
 
-    console.log(character[999].Name);
+
+    for (let i = 0; i < cardData.length; i++) {
+        card.innerHTML += "<div class='card'>" +
+        "<div class='card-body'>" +
+        "<h2 class='card-title'>" + cardData[i].Name + "</h2>" +
+        "<p class='card-text'>" + cardData[i].Mother + "</p>" +
+        "</div>" +
+        "</div>";
+    }
 }

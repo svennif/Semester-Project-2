@@ -1,11 +1,4 @@
 /* Color Theme Swatches in Hex */
-body {
-  margin: 0;
-  padding: 0;
-  background-color: red;
-}
-
-/* Color Theme Swatches in Hex */
 .navbar {
   background-color: #0D080B;
 }
@@ -19,4 +12,4 @@ body {
   color: #F2CEAE;
   text-decoration: none;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=navbar.css.map */
