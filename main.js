@@ -9,18 +9,21 @@ fetch("https://raw.githubusercontent.com/svennif/AnApiOfIceAndFire/master/data/c
         console.log(error);
     });
 
-
 function showObject(characterObject) {
     cardData = characterObject;
-    let card = document.querySelector(".card-container");
+    let cardContainer = document.querySelector(".card-container");
 
-    for (let i = 0; i <= cardData.length; i++) {
-        card.innerHTML += "<div class='card'>" +
+    for (let i = 0; i < cardData.length; i++) {
+        cardContainer.innerHTML += "<div class='card'>" +
+            "<input class='checkbox' type='checkbox'" + "id='" + cardData[i].Id + "' value='" + cardData[i].Id + "'>" +
             "<div class='card-body'>" +
+            "<label class='card-content' for='" + cardData[i].Id + "'>" +
             "<h2 class='card-title'>" + cardData[i].Name + "</h2>" +
             "<p class='card-text'>" + cardData[i].PlayedBy + "</p>" +
             "<p class='card-text'>" + cardData[i].Aliases[0] + "</p>" +
+            "</label>" +
             "</div>" +
             "</div>";
     }
+
 }

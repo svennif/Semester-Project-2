@@ -15,23 +15,36 @@
         font-size: 1.7rem;
     }
 
-    .card-title,
-    .card-text {
+    label {
+        display: inherit;
         text-align: center;
+        cursor: pointer;
     }
 
+    /*
+    
+    input {
+        visibility: hidden;
+    }
+    
+    */
 
+
+    .card:hover {
+        transform: scale(1.1);
+    }
+
+    .card:checked {
+        color: red;
+    }
 }
 
-.card:hover {
-    transform: scale(1.1);
-}
 
 @media screen and (max-width: 425px) {
     .card {
         margin: 10px auto 10px auto;
     }
-    
+
     .card-main-title {
         margin: 20px auto 10px auto;
     }
