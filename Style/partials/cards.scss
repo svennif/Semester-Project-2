@@ -1,0 +1,38 @@
+@import "variables.scss";
+
+.card-main-title {
+    border-bottom: 2px solid $black;
+    margin-bottom: 5px;
+}
+
+.card {
+    width: 300px;
+    height: 200px;
+    margin: 20px 20px 20px 0;
+    transition: transform .2s;
+
+    .card-title {
+        font-size: 1.7rem;
+    }
+
+    .card-title,
+    .card-text {
+        text-align: center;
+    }
+
+
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 425px) {
+    .card {
+        margin: 10px auto 10px auto;
+    }
+    
+    .card-main-title {
+        margin: 20px auto 10px auto;
+    }
+}

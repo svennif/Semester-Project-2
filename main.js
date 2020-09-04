@@ -14,8 +14,8 @@ function showObject(characterObject) {
     cardData = characterObject;
     let card = document.querySelector(".card-container");
 
-    for (let i = 0; i <= 10; i++) {
-        card.innerHTML += "<div class='col card'>" +
+    for (let i = 0; i <= cardData.length; i++) {
+        card.innerHTML += "<div class='card'>" +
             "<div class='card-body'>" +
             "<h2 class='card-title'>" + cardData[i].Name + "</h2>" +
             "<p class='card-text'>" + cardData[i].PlayedBy + "</p>" +

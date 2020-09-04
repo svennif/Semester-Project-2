@@ -1,26 +1,4 @@
 /* Color Theme Swatches in Hex */
-body,
-html {
-  margin: 0;
-  padding: 0;
-}
-
-/* Color Theme Swatches in Hex */
-.navbar {
-  background-color: #0D080B;
-}
-
-.navbar span {
-  color: #F2CEAE;
-  text-decoration: none;
-}
-
-.nav-link {
-  color: #F2CEAE;
-  text-decoration: none;
-}
-
-/* Color Theme Swatches in Hex */
 .card-main-title {
   border-bottom: 2px solid #0D080B;
   margin-bottom: 5px;
@@ -58,4 +36,4 @@ html {
     margin: 20px auto 10px auto;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=cards.css.map */
