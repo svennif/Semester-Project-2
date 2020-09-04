@@ -1,4 +1,4 @@
-fetch("https://raw.githubusercontent.com/svennif/Semester-Project-2/master/data.json?token=AH6GSHSIZS3REN3LDQ5D5VS7KGF7W")
+fetch("https://raw.githubusercontent.com/svennif/AnApiOfIceAndFire/master/data/characters.json")
     .then(function (response) {
         return response.json();
     })
@@ -14,15 +14,13 @@ function showObject(characterObject) {
     cardData = characterObject;
     let card = document.querySelector(".card-container");
 
-
-    for (let i = 0; i < cardData.length; i++) {
+    for (let i = 0; i <= 10; i++) {
         card.innerHTML += "<div class='col card'>" +
-        "<div class='card-body'>" +
-        "<h2 class='card-title'>" + cardData[i].Name + "</h2>" +
-        "<p class='card-text'>" + cardData[i].PlayedBy + "</p>" +
-        "<p class='card-text'>" + cardData[i].Aliases[0] + "</p>" +
-        //"<p class='card-text'>" + cardData[i].PlayedBy + "</p>" +
-        "</div>" +
-        "</div>";
+            "<div class='card-body'>" +
+            "<h2 class='card-title'>" + cardData[i].Name + "</h2>" +
+            "<p class='card-text'>" + cardData[i].PlayedBy + "</p>" +
+            "<p class='card-text'>" + cardData[i].Aliases[0] + "</p>" +
+            "</div>" +
+            "</div>";
     }
 }
