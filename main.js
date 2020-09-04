@@ -1,4 +1,4 @@
-fetch("https://raw.githubusercontent.com/joakimskoog/AnApiOfIceAndFire/master/data/characters.json")
+fetch("https://raw.githubusercontent.com/svennif/Semester-Project-2/559b50ddb7386c6235fc64c7b27df9292fb0ec75/data.json?token=AH6GSHQYT7CIGZJDPEBB2227KGEHG")
     .then(function (response) {
         return response.json();
     })
@@ -20,6 +20,8 @@ function showObject(characterObject) {
         "<div class='card-body'>" +
         "<h2 class='card-title'>" + cardData[i].Name + "</h2>" +
         "<p class='card-text'>" + cardData[i].PlayedBy + "</p>" +
+        "<p class='card-text'>" + cardData[i].Aliases[0] + "</p>" +
+        //"<p class='card-text'>" + cardData[i].PlayedBy + "</p>" +
         "</div>" +
         "</div>";
     }

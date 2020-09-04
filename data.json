@@ -41,7 +41,7 @@
         "IsFemale": true,
         "Culture": "",
         "Titles": ["Princess"],
-        "Aliases": [],
+        "Aliases": ["Khaleesi"],
         "Born": "In 172 AC",
         "Died": "",
         "Father": null,
@@ -51,7 +51,7 @@
         "Allegiances": [378, 285],
         "Books": [11, 6, 8],
         "PovBooks": [],
-        "PlayedBy": [""],
+        "PlayedBy": ["Emilia Clarke"],
         "TvSeries": []
     },
     {

@@ -5,6 +5,10 @@ body {
   background-color: red;
 }
 
+.card {
+  width: 200px;
+}
+
 /* Color Theme Swatches in Hex */
 .navbar {
   background-color: #0D080B;
