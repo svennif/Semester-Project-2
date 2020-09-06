@@ -2,26 +2,41 @@
 
 .card-main-title {
     border-bottom: 2px solid $black;
+    padding-top: 20px;
     margin-bottom: 5px;
 }
 
 .card {
     width: 300px;
     height: 200px;
-    margin: 20px 20px 20px 0;
+    margin: 10px 20px 10px 0;
     transition: transform .2s;
 
     .card-title {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
+    }
+
+    input[type=checkbox] {
+        opacity: 0;
+    }
+
+    input[type=checkbox]:checked+label {
+        color: $orange;
+    }
+
+    input[type=checkbox]:disabled+label {
+        color: $offwhite;
     }
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
-input[type=checkbox]:checked + label {
-    color: grey;
+.btn {
+    visibility: hidden;
+    background-color: $orange;
+    color: $black;
 }
 
 @media screen and (max-width: 425px) {
@@ -31,5 +46,11 @@ input[type=checkbox]:checked + label {
 
     .card-main-title {
         margin: 20px auto 10px auto;
+    }
+
+    .btn {
+        visibility: hidden;
+        background-color: $orange;
+        color: $black;
     }
 }

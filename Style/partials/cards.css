@@ -1,13 +1,14 @@
 /* Color Theme Swatches in Hex */
 .card-main-title {
   border-bottom: 2px solid #0D080B;
+  padding-top: 20px;
   margin-bottom: 5px;
 }
 
 .card {
   width: 300px;
   height: 200px;
-  margin: 20px 20px 20px 0;
+  margin: 10px 20px 10px 0;
   -webkit-transition: -webkit-transform .2s;
   transition: -webkit-transform .2s;
   transition: transform .2s;
@@ -15,16 +16,30 @@
 }
 
 .card .card-title {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
+}
+
+.card input[type=checkbox] {
+  opacity: 0;
+}
+
+.card input[type=checkbox]:checked + label {
+  color: #df7d06;
+}
+
+.card input[type=checkbox]:disabled + label {
+  color: #f0ddcd;
 }
 
 .card:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
-input[type=checkbox]:checked + label {
-  color: red;
+.btn {
+  visibility: hidden;
+  background-color: #df7d06;
+  color: #0D080B;
 }
 
 @media screen and (max-width: 425px) {
@@ -33,6 +48,11 @@ input[type=checkbox]:checked + label {
   }
   .card-main-title {
     margin: 20px auto 10px auto;
+  }
+  .btn {
+    visibility: hidden;
+    background-color: #df7d06;
+    color: #0D080B;
   }
 }
 /*# sourceMappingURL=cards.css.map */
