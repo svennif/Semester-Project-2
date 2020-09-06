@@ -12,32 +12,16 @@
   transition: -webkit-transform .2s;
   transition: transform .2s;
   transition: transform .2s, -webkit-transform .2s;
-  /*
-    
-    input {
-        visibility: hidden;
-    }
-    
-    */
 }
 
 .card .card-title {
   font-size: 1.7rem;
 }
 
-.card label {
-  display: inherit;
-  text-align: center;
-  cursor: pointer;
-}
-
-.card .card:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.card .card:checked {
-  color: red;
+.card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  color: #F28B0C;
 }
 
 @media screen and (max-width: 425px) {

@@ -14,31 +14,12 @@
     .card-title {
         font-size: 1.7rem;
     }
-
-    label {
-        display: inherit;
-        text-align: center;
-        cursor: pointer;
-    }
-
-    /*
-    
-    input {
-        visibility: hidden;
-    }
-    
-    */
-
-
-    .card:hover {
-        transform: scale(1.1);
-    }
-
-    .card:checked {
-        color: red;
-    }
 }
 
+.card:hover {
+    transform: scale(1.05);
+    color: $orange;
+}
 
 @media screen and (max-width: 425px) {
     .card {
