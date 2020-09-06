@@ -43,7 +43,10 @@ html {
 .card:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-  color: #F28B0C;
+}
+
+input[type=checkbox]:checked + label {
+  color: red;
 }
 
 @media screen and (max-width: 425px) {

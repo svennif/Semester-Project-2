@@ -18,7 +18,10 @@
 
 .card:hover {
     transform: scale(1.05);
-    color: $orange;
+}
+
+input[type=checkbox]:checked + label {
+    color: grey;
 }
 
 @media screen and (max-width: 425px) {
