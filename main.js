@@ -37,3 +37,7 @@ function showObject(characterObject) {
         }
     })
 }
+
+function btn() {
+    window.location.replace('game.html');
+}

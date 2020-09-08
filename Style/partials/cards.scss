@@ -33,7 +33,7 @@
     transform: scale(1.1);
 }
 
-.btn {
+.cardButton {
     visibility: hidden;
     background-color: $orange;
     color: $black;
@@ -48,7 +48,7 @@
         margin: 20px auto 10px auto;
     }
 
-    .btn {
+    .cardButton {
         visibility: hidden;
         background-color: $orange;
         color: $black;

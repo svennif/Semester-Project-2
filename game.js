@@ -36,56 +36,51 @@ const board = [
     {left: 40, top: 50},
 ]
 
-const tilesWrapper = document.getElementById('game-board');
+var currentPosition = 0;
+var rollLog = [];
+
+// Dice
+function rollDice() {
+  return Math.floor(Math.random()* 6 + 1);
+}
+
+let el = document.getElementById('rollLog');
+
+function updatedHistory(roll) {
+  rollLog.push(roll);
+  el.innerHTML = '';
+  rollLog.forEach((record, i) => {
+    var logDiv = document.createElement('div');
+    logDiv.innerHTML = `${(i + 1)}: ${record}`;
+    el.appendChild(logDiv);
+  });
+}
+
+var tileContainer = document.getElementById('tileContainer');
 
 board.forEach(tile => {
-    const tileDiv = document.createElement('div');
-    tileDiv.className = 'tile';
-    tileDiv.style.left = tile.left + 'px';
-    tileDiv.style.top = tile.top + 'px';
-    tilesWrapper.appendChild(tileDiv);
-  });
+  const tileDiv = document.createElement('div');
+  tileDiv.className = 'tile';
+  tileDiv.style.left = tile.left + 'px';
+  tileDiv.style.top = tile.top + 'px';
+  tileContainer.appendChild(tileDiv);
+});
 
+let token = document.getElementById('token');
+let button = document.getElementById('rollButton');
 
-  let rollHistory = [];
-  let currentPosition = 0; // starting positon
-  
-  function rollDice() {
-    return Math.floor(Math.random() * 6) + 1;
-  }
-  
-  // show roll history
-const el = document.getElementById('roll-history');
-  
-function updateHistory(roll) {
-    rollHistory.push(roll);
-    el.innerHTML = '';
-    rollHistory.forEach((record, i) => {
-      const recordDiv = document.createElement('div');
-      recordDiv.innerHTML = `${(i + 1)}: ${record}`;
-      el.appendChild(recordDiv);
-    });
-  }
-
-// button and position logic
-const button = document.getElementById('roll-button');
-const piece = document.getElementById('token');
-
-button.addEventListener('click', (e) => {
-  const roll = rollDice();
-  updateHistory(roll);
+button.addEventListener('click' , (e) => {
+  let roll = rollDice();
+  updatedHistory(roll);
 
   if (currentPosition + roll >= board.length) {
-    // not enought tiles left, go to last
-    currentPosition = board.length - 1;
+    currentPosition = board.length -1;
   } else {
-    currentPosition += roll;
+    currentPosition += roll; 
   }
-  
-  piece.style.left = board[currentPosition].left + 'px';
-  piece.style.top = board[currentPosition].top + 'px';
-  
-  // if on last, WIN!
+  token.style.left = board[currentPosition].left + 'px';
+  token.style.left = board[currentPosition].top + 'px';
+
   if (currentPosition === board.length - 1) {
     setTimeout(() => alert('You win!'), 1);
   }
