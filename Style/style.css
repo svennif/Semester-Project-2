@@ -73,23 +73,41 @@ html {
   }
 }
 
+.tileContainer {
+  top: 500px;
+}
+
 .tile {
-  display: inline-block;
+  position: absolute;
   height: 100px;
   width: 100px;
   background-color: #df7d06;
-  top: 500px;
-  left: 500px;
   border: 1px solid #0D080B;
 }
 
 #token {
   position: absolute;
-  top: 100px;
-  left: 420px;
+  top: 35px;
+  left: 35px;
   height: 30px;
   width: 30px;
   border-radius: 50%;
   background-color: red;
+}
+
+#rollButton,
+#rollLog,
+.row {
+  position: absolute;
+}
+
+.rollContainer {
+  left: 50%;
+}
+
+.rollHistory {
+  top: 15%;
+  left: 50%;
+  width: 150px;
 }
 /*# sourceMappingURL=style.css.map */
