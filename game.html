@@ -23,22 +23,23 @@
         </nav>
     </header>
     <main>
-        <div class="container">
-            <div class="row">
-                <div id="tileContainer"></div>
-                <div id="token"></div>
-            </div>
+        <button id="rollButton">Roll</button>
+
+        <div class="historyOne">
+            <p>Roll history <b>Player One</b>: </p>
+            <div id="logOne"></div>
         </div>
-        <div class="container">
-            <div class="row rollContainer">
-                <button type="button" class="btn" id="rollButton">Roll</button>
-            </div>
-            <div class="row rollHistory">
-                <div id="rollLog"></div>
-            </div>
+        <div class="historyTwo">
+            <p>Roll history <b>Player Two</b>: </p>
+            <div id="logTwo"></div>
+        </div>
+
+        <div id="tileContainer"></div>
+        <div id="tokenOne"></div>
+        <div id="tokenTwo"></div>
         </div>
     </main>
-    <footer></footer>
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
@@ -50,5 +51,4 @@
     </script>
     <script src='game.js'></script>
 </body>
-
 </html>
