@@ -90,10 +90,29 @@ function diceTwo() {
   return Math.floor(Math.random() * 6 + 1);
 }
 
+/*
+var can = document.getElementById('canvas1');
+var ctx = tokenOne.getContext('2d');
+
+var targaryen = new Image();
+targaryen.onload = function() {
+ctx.drawImage(targaryen, 0, 0);
+}
+targaryen.src = "images/targaryen.svg";
+
+var stark = new Image();
+stark.onload = function() {
+ctx.drawImage(stark, 0, 0);
+}
+stark.src = "images/stark.svg";
+*/
+
 // button and position logic
 const button = document.getElementById('rollButton');
 const tokenOne = document.getElementById('tokenOne');
 const tokenTwo = document.getElementById('tokenTwo');
+
+
 
 button.addEventListener('click', (e) => {
   const rollOne = diceOne();

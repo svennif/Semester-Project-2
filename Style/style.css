@@ -129,4 +129,12 @@ html {
   border: none;
   padding: 12px;
 }
+
+#canvas1 {
+  position: absolute;
+  height: 200px;
+  width: 350px;
+  top: 50%;
+  left: 50%;
+}
 /*# sourceMappingURL=style.css.map */
