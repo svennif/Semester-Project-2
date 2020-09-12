@@ -18,6 +18,7 @@ function showObject(characterObject) {
             "<input class='stretched-link checkbox' type='checkbox'" + "id='" + cardData[i].Id + "' value='" + cardData[i].Id + "'>" +
             "<label class='card-body' for='" + cardData[i].Id + "'>" +
             "<h2 class='card-title'>" + cardData[i].Name + "</h2>" +
+            "<img src='" + cardData[i].Images + "'>" + 
             "<p class='card-text'><b>Played by: </b>" + cardData[i].PlayedBy + "</p>" +
             "<p class='card-text'><b>Known aliases: </b>" + cardData[i].Aliases[0] + "</p>" +
             "</div>" +
