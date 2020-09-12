@@ -25,6 +25,25 @@ function showObject(characterObject) {
             "</label>";
     }
 
+    let characterCard = document.getElementsByClassName('card');
+    let characterName = document.getElementsByClassName('card-title');
+    let characterValue;
+
+    for (let i = 0; i < characterCard.length; i++) {
+        characterCard[i].addEventListener('click', e => {
+            characterValue = e.path[1].childNodes[1].childNodes[0].innerHTML;
+            if (!localStorage.getItem('playerOne') && localStorage.getItem('playerTwo') !== characterValue) {
+                addPlayerOne(characterName[i].innerHTML);
+            } else if (!localStorage.getItem('playerTwo') && localStorage.getItem('playerOne') !== characterValue) {
+                addPlayerTwo(characterName[i].innerHTML);
+            } else if (localStorage.getItem('playerOne') && localStorage.getItem('playerOne') === characterValue) {
+                removePlayerOne(characterName[i].innerHTML);
+            } else if (localStorage.getItem('playerTwo') && localStorage.getItem('playerTwo') === characterValue) {
+                removePlayerTwo(characterName[i].innerHTML);
+            }
+        });
+    }
+
     $("input[type=checkbox]").change(function () {
         var max = 2;
         if ($("input[type=checkbox]:checked").length == max) {
@@ -35,7 +54,23 @@ function showObject(characterObject) {
             $("input[type=checkbox]").removeAttr('disabled');
             $(".btn").css('visibility', 'hidden');
         }
-    })
+    });
+};
+
+function addPlayerOne(playerOne) {
+    localStorage.setItem('playerOne', playerOne);
+}
+
+function addPlayerTwo(playerTwo) {
+    localStorage.setItem('playerTwo', playerTwo);
+}
+
+function removePlayerOne() {
+    localStorage.removeItem('playerOne');
+}
+
+function removePlayerTwo() {
+    localStorage.removeItem('playerTwo');
 }
 
 function btn() {

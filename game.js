@@ -45,24 +45,26 @@ var playerTwoPos = 0; // Player Two starting position
 // show roll history
 const el = document.getElementById('logOne');
 const le = document.getElementById('logTwo');
+document.getElementById('playerOne').innerHTML = "<b>" + localStorage.getItem('playerOne') + "</b>";
+document.getElementById('playerTwo').innerHTML = "<b>" + localStorage.getItem('playerTwo') + "</b>";
 
 function updateHistoryOne(rollOne) {
   rollHistoryOne.push(rollOne);
   el.innerHTML = '';
   rollHistoryOne.forEach((record, i) => {
     const playerOneLog = document.createElement('div');
-    playerOneLog.className = 'playerOne';
+    playerOneLog.className = 'playerOneLog';
     playerOneLog.innerHTML = `<b>${(i + 1)}:</b> ${record}`;
     el.appendChild(playerOneLog);
   });
 }
 
 function updateHistoryTwo(rollTwo) {
-  rollHistoryTwo.push(rollTwo);
+  rollHistoryTwo.push(rollTwo); 
   le.innerHTML = '';
   rollHistoryTwo.forEach((record, i) => {
     const playerTwoLog = document.createElement('div');
-    playerTwoLog.className = 'playerTwo';
+    playerTwoLog.className = 'playerTwoLog';
     playerTwoLog.innerHTML = `<b>${(i + 1)}:</b> ${record}`;
     le.appendChild(playerTwoLog);
   });
@@ -93,7 +95,6 @@ const button = document.getElementById('rollButton');
 const tokenOne = document.getElementById('tokenOne');
 const tokenTwo = document.getElementById('tokenTwo');
 
-
 button.addEventListener('click', (e) => {
   const rollOne = diceOne();
   const rollTwo = diceTwo();
@@ -119,30 +120,68 @@ button.addEventListener('click', (e) => {
   tokenTwo.style.left = board[playerTwoPos].left + 35 + 'px';
   tokenTwo.style.top = board[playerTwoPos].top + 35 + 'px';
 
-  const trapOne = 'Trap 1!';
-  const trapTwo = 'Trap 2!';
-  const trapThree = 'Trap 3!';
-  const trapFour = 'Trap 4!';
-  const trapFive = 'Trap 5!';
+function tokenOnePosition() {
+  tokenOne.style.left = board[playerOnePos].left + 35 + 'px';
+  tokenOne.style.top = board[playerOnePos].top + 35 + 'px';
+}
 
-  if (playerOnePos === 7 || playerTwoPos === 7) {
-    alert(trapOne); 
-  } else if (playerOnePos === 10 || playerTwoPos === 10) {
-    alert(trapTwo);
-  } else if (playerOnePos === 13 || playerTwoPos === 13) {
-    alert(trapThree);
-  } else if (playerOnePos === 20 || playerTwoPos === 20) {
-    alert(trapFour);
-  } else if (playerOnePos === 27 || playerTwoPos === 27) {
-    alert(trapFive);
-  }
+function tokenTwoPosition() {
+  tokenTwo.style.left = board[playerTwoPos].left + 35 + 'px';
+  tokenTwo.style.top = board[playerTwoPos].top + 35 + 'px';
+}
+
+if (playerOnePos === 7) {
+  alert('Player 1 must og back 5');
+  playerOnePos = 2;
+  tokenOnePosition();
+} else if (playerOnePos === 10) {
+  alert('Player 1 must go back 2');
+  playerOnePos = 8;
+  tokenOnePosition();
+} else if (playerOnePos === 13) {
+  alert('Player 1 must go back 3');
+  playerOnePos = 10; 
+  tokenOnePosition();
+} else if (playerOnePos === 20) {
+  alert('Player 1 must og back 5'); 
+  playerOnePos = 15;
+  tokenOnePosition();
+} else if (playerOnePos === 27) {
+  alert('player 1 must go back 4')
+  playerOnePos = 23;
+  tokenOnePosition();
+};  
+
+if(playerTwoPos === 7) {
+  alert('Player 2 must og back 1');
+  playerTwoPos = 6;
+  tokenTwoPosition();
+} else if (playerTwoPos === 10) {
+  alert('Player 2 must go back 2');
+  playerTwoPos = 8;
+  tokenTwoPosition();
+} else if (playerTwoPos === 13) {
+  alert('Player 2 must go back 3');
+  playerTwoPos = 10; 
+  tokenTwoPosition();
+} else if (playerTwoPos === 20) {
+  alert('Player 2 must og back 5'); 7
+  playerTwoPos = 15;
+  tokenTwoPosition();
+} else if (playerTwoPos === 27) {
+  alert('player 2 must go back 4')
+  playerTwoPos = 23;
+  tokenTwoPosition();
+};
 
   // if on last, WIN!
   if (playerOnePos === board.length - 1) {
-    setTimeout(() => alert('Player one win!'), 1);
+    alert(localStorage.getItem('playerOne') + ' is victorious!');
+    window.location.replace('victory.html');
   }
 
   if (playerTwoPos === board.length - 1) {
-    setTimeout(() => alert('Player two win!'), 1);
+    alert(localStorage.getItem('playerTwo') + ' is victorious!');
+    window.location.replace('victory.html');
   }
 });
