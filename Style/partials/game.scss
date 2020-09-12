@@ -4,22 +4,21 @@
 
 #tokenOne {
   position: absolute;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background: $black;
-  top: 135px;
-  left: 35px;
+  height: 60px;
+  width: 100px;
+  color: $black;
+  top: 120px;
+  left: 20px;
 }
 
 #tokenTwo {
   position: absolute;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background: white;
-  top: 135px;
-  left: 35px;
+  height: 60px;
+  width: 100px;
+  top: 120px;
+  left: 20px;
+  filter: brightness(0) invert(1);
+
 }
 
 .tile {
