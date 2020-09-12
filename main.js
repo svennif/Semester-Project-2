@@ -102,6 +102,12 @@ function removePlayerTwoImg() {
     localStorage.removeItem('playerTwoImg');
 }
 
+let homeButton = document.querySelector('.home-button');
+
+homeButton.addEventListener('click', e => {
+    localStorage.clear();
+});
+
 function btn() {
     window.location.replace('game.html');
 }

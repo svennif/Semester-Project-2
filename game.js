@@ -90,25 +90,12 @@ function diceTwo() {
   return Math.floor(Math.random() * 6 + 1);
 }
 
-/*
-var can = document.getElementById('canvas1');
-var ctx = tokenOne.getContext('2d');
-
-var targaryen = new Image();
-targaryen.onload = function() {
-ctx.drawImage(targaryen, 0, 0);
-}
-targaryen.src = "images/targaryen.svg";
-
-var stark = new Image();
-stark.onload = function() {
-ctx.drawImage(stark, 0, 0);
-}
-stark.src = "images/stark.svg";
-*/
-
 // button and position logic
 const button = document.getElementById('rollButton');
+
+/**
+ * Token image
+ */
 const tokenOneContainer = document.getElementById('tokenOne');
 const tokenTwoContainer = document.getElementById('tokenTwo');
 
@@ -210,14 +197,25 @@ button.addEventListener('click', (e) => {
     tokenTwoPosition();
   };
 
+  function victory(winner, winnerToken){
+    localStorage.setItem('winner', winner);
+    localStorage.setItem('winnerToken', winnerToken);
+  }
+
   // if on last, WIN!
   if (playerOnePos === board.length - 1) {
     alert(localStorage.getItem('playerOne') + ' is victorious!');
+    victory('playerOne', 'playerOneImg');
     window.location.replace('victory.html');
-  }
-
-  if (playerTwoPos === board.length - 1) {
+  } else if (playerTwoPos === board.length - 1) {
     alert(localStorage.getItem('playerTwo') + ' is victorious!');
+    victory('playerTwo', 'playerOneImg');
     window.location.replace('victory.html');
   }
+});
+
+let homeButton = document.querySelector('.home-button');
+
+homeButton.addEventListener('click', e => {
+    localStorage.clear();
 });
