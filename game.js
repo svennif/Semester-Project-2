@@ -153,46 +153,46 @@ button.addEventListener('click', (e) => {
   }
 
   if (playerOnePos === 7) {
-    alert('Player 1 must og back 5');
+    alert('Hodor did not hold the door, go back 5 steps');
     playerOnePos = 2;
     tokenOnePosition();
   } else if (playerOnePos === 10) {
-    alert('Player 1 must go back 2');
+    alert("Deanery's dragon is having a nap in the road, go back 2 steps");
     playerOnePos = 8;
     tokenOnePosition();
   } else if (playerOnePos === 13) {
-    alert('Player 1 must go back 3');
+    alert('House of Lannister have knocked over a tree, go back 3 steps');
     playerOnePos = 10;
     tokenOnePosition();
   } else if (playerOnePos === 20) {
-    alert('Player 1 must og back 5');
+    alert('Bryan Stark is running you over, go back 5 steps');
     playerOnePos = 15;
     tokenOnePosition();
   } else if (playerOnePos === 27) {
-    alert('player 1 must go back 4')
+    alert('The Three-Eyed Raven is judging you from afar, go back 4 steps');
     playerOnePos = 23;
     tokenOnePosition();
   };
 
   if (playerTwoPos === 7) {
-    alert('Player 2 must og back 1');
+    alert('Hodor did not hold the door, go back 5 steps');
     playerTwoPos = 6;
     tokenTwoPosition();
   } else if (playerTwoPos === 10) {
-    alert('Player 2 must go back 2');
+    alert("Deanery's dragon is having a nap in the road, go back 2 steps");
     playerTwoPos = 8;
     tokenTwoPosition();
   } else if (playerTwoPos === 13) {
-    alert('Player 2 must go back 3');
+    alert('House of Lannister have knocked over a tree, go back 3 steps');
     playerTwoPos = 10;
     tokenTwoPosition();
   } else if (playerTwoPos === 20) {
-    alert('Player 2 must og back 5');
+    alert('Bryan Stark is running you over, go back 5 steps');
     7
     playerTwoPos = 15;
     tokenTwoPosition();
   } else if (playerTwoPos === 27) {
-    alert('player 2 must go back 4')
+    alert('The Three-Eyed Raven is judging you from afar, go back 4 steps');
     playerTwoPos = 23;
     tokenTwoPosition();
   };
